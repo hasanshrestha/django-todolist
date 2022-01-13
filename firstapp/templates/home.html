@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>  
+    <head>  
+        <meta charset="utf-8">
+        <title>Django Template</title>     
+    </head>
+    <body>
+            <!--This is a demo template of django-->
+            {{demo}}
+            {{year}}
+
+            {% comment %} {% for i in demo: print(i) %}
+            {% endfor %} {% endcomment %}
+
+            {% for i in demo %}
+                {{i}}
+            {% endfor %}
+
+            {% for i in n %}
+                {{i}}
+            {% endfor %}
+
+             {% autoescape off %} {{cal}} {% endautoescape %}
+             
+             <form method="#" class="#">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Save</button>
+            </form>
+
+            {% comment %} <form method="post" action="{% url 'usertaskpost/' %}">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" value="Save">
+            </form>         {% endcomment %}
+    
+            <h2>{{data.task_title}}</h2>
+            <h2>{{data.task_description}}</h2>
+            <h2>{{data.task_assigned_at}}</h2>
+    </body>
+</html>

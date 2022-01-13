@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>  
+    <head>  
+        <meta charset="utf-8">
+        <title>Django Template</title>     
+    </head>
+    <body>
+        <form method="#" action="post/">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Save">
+        </form>
+        <h2>{{data.task_title}}</h2>
+        <h2>{{data.task_description}}</h2>
+        <h2>{{data.task_assigned_at}}</h2>
+       </body>
+</html>
